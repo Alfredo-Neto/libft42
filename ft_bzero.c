@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/16 02:29:02 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/05/17 12:13:24 by ade-agui         ###   ########.fr       */
+/*   Created: 2021/05/17 11:57:52 by ade-agui          #+#    #+#             */
+/*   Updated: 2021/05/17 12:15:57 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+#include "libft.h"
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>
+void ft_bzero(void * s, size_t n)
+{
+  char * c = s;
+  size_t i;
 
-/*
-** Part one - Libc functions
-*/
-
-void            *ft_memset(void *s, int c, size_t n);
-void             ft_bzero(void *s, size_t n);
-
-
-#endif
+  i = -1;  
+  while (++i < n)
+  {
+    c[i] = '\0';
+  }
+}

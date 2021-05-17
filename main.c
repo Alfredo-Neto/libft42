@@ -16,8 +16,14 @@ void printArray(char *arr, int n)
 int main(void)
 {
     char arr[] = "ABCD";
+    // printArray(arr, 4);
+    // printf("Memset is: \n");
+    // ft_memset(arr,'3', sizeof(arr));
+    // printArray(arr, 4);
+
     printArray(arr, 4);
-    ft_memset(arr,'3', sizeof(arr));
+    printf("bzero is: \n");
+    ft_bzero(arr, sizeof(arr));
     printArray(arr, 4);
     return (0);
-	}
+}
