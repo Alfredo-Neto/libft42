@@ -15,8 +15,10 @@ void printArray(char *arr, int n)
 
 int main(void)
 {
-    char arr[] = "ABCD";
-    char arr2[] = "123:4";
+    char arr[] = "Start Stopta"; // artrt Stop
+
+    // Dest:    [-]
+    // Source:    [-] 
 
     // printArray(arr, 4);
     // printf("Memset is: \n");
@@ -28,15 +30,18 @@ int main(void)
     // ft_bzero(arr, sizeof(arr));
     // printArray(arr, 4);
 
-    // printArray(arr, 4);
+    // printArray(arr, sizeof(arr));
     // printf("memcpy is: \n");
-    // ft_memcpy(arr, arr2, sizeof(arr));
-    // printArray(arr, 4);
+    // ft_memcpy(arr, arr + 2 , 3 * sizeof(char));
+    // printArray(arr, sizeof(arr));
 
-    printArray(arr, 4);
-    printf("memccpy is: \n");
-    ft_memccpy(arr, arr2, ':', sizeof(arr));
-    printArray(arr, 4);
+    // printArray(arr, 4);
+    // printf("memccpy is: \n");artrt Stop
+
+    printArray(arr, sizeof(arr));
+    printf("memmove is: \n");
+    ft_memmove(arr, arr + 2 , 3 * sizeof(char));
+    printArray(arr, sizeof(arr));
 
     return (0);
 }

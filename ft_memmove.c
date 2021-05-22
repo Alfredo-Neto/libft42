@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/17 13:29:21 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/05/20 04:18:53 by ade-agui         ###   ########.fr       */
+/*   Created: 2021/05/20 12:18:47 by ade-agui          #+#    #+#             */
+/*   Updated: 2021/05/20 18:57:22 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-    size_t		i;
-	char		*aux_dst;
-	const char	*aux_src;
+	char *aux_dst;
+	char *aux_src;
 
-	aux_dst = dest;
-	aux_src = src;
-	i = 0;
-	while (i < n && dest != src)
+	aux_dst = dst;
+	aux_src = (char *)src;
+	if (dst > src)
 	{
-		aux_dst[i] = aux_src[i];
-		i++;
+		aux_dst = aux_dst + len - 1;
+		aux_src = aux_src + len - 1;
+		while (len >= 1) // art 2
+		{
+			*aux_dst = *aux_src;
+			aux_dst--;
+			aux_src--;
+			len--;
+		}
 	}
-	return (dest);	
+	else
+		ft_memcpy(dst, src, len);
+	return (dst);
 }
