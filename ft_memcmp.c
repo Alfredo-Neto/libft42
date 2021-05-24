@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/20 12:18:47 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/05/23 01:22:28 by ade-agui         ###   ########.fr       */
+/*   Created: 2021/05/24 16:39:23 by ade-agui          #+#    #+#             */
+/*   Updated: 2021/05/24 17:11:24 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	char *aux_dst;
-	char *aux_src;
+    size_t      i;
 
-	aux_dst = dst;
-	aux_src = (char *)src;
-	if (dst > src)
-	{
-		aux_dst = aux_dst + len - 1;
-		aux_src = aux_src + len - 1;
-		while (len >= 1)
-		{
-			*aux_dst = *aux_src;
-			aux_dst--;
-			aux_src--;
-			len--;
-		}
-	}
-	else
-		ft_memcpy(dst, src, len);
-	return (dst);
+    i = 0;
+    while (i < n) 
+    {
+        if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
+            return (((unsigned char *) s1)[i] - ((unsigned char *)s2)[i]);
+        i++;    
+    }
+    return (0);
 }

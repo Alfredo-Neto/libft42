@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 14:00:17 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/05/19 21:35:16 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/05/23 00:57:02 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ void *ft_memccpy(void *dest, const void *src, int c, size_t n)
 	{
 		*(aux_dst++) = *aux_src;
 		if (*(aux_src++) == (unsigned char)c)
+		{
 			return ((char *)aux_dst);
+		}
 	}
 	return (0);
 }

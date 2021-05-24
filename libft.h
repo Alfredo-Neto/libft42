@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 02:29:02 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/05/20 12:19:54 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/05/24 16:39:58 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,8 @@ void             ft_bzero(void *s, size_t n);
 void            *ft_memcpy(void *dest, const void *src, size_t n);
 void            *ft_memccpy(void *dest, const void *src, int c, size_t n);
 void	        *ft_memmove(void *dst, const void *src, size_t len);
+void	        *ft_memchr(const void *s, int c, size_t n);
+int		         ft_memcmp(const void *s1, const void *s2, size_t n);
+
 
 #endif
