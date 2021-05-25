@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/24 16:39:23 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/05/24 21:09:36 by ade-agui         ###   ########.fr       */
+/*   Created: 2021/05/24 21:11:55 by ade-agui          #+#    #+#             */
+/*   Updated: 2021/05/24 21:36:47 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+size_t		ft_strlen(const char *str)
 {
-    size_t      i;
+	int		i;
 
-    i = 0;
-    while (i < n) 
-    {
-        if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
-            return (((unsigned char *) s1)[i] - ((unsigned char *)s2)[i]);
-        i++;    
-    }
-    return (0);
+	i = 0;
+	if (str[i] == '\0')
+		return (0);
+	while (str[i])
+		i++;
+	return (i);
 }

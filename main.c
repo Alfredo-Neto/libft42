@@ -13,6 +13,20 @@ void printArray(char *arr, int n)
     printf("\n");
 }
 
+void ft_strlen_test(char *str)
+{
+    int size;
+    int ft_size;
+
+    size = strlen(str);
+    ft_size = ft_strlen(str);
+
+    if (size != ft_size)
+        printf("> KO, return value does not match the original function. Expected: %d. Got: %d instead\n", size, ft_size);
+    else
+        printf("> OK. Result: %d\n", ft_size);
+}
+
 int main(void)
 {
     // char arr[] = "Start Stop"; 
@@ -55,14 +69,28 @@ int main(void)
 
     // printf("String after %c is : %s\n", ch, ret);
 
-    char *s1 = calloc(10, sizeof(char));
-    char *s2 = calloc(8, sizeof(char));
+    // char *s1 = calloc(10, sizeof(char));
+    // char *s2 = calloc(8, sizeof(char));
 
-    s1 = "abcdefghi";
-    s2 = "abcdefg";
+    // s1 = "abcdefghi";
+    // s2 = "abcdefg";
 
-    printf("s1: %s, s2: %s\n", s1, s2);
-    printf("Difference between s1 and s2: %d\n", ft_memcmp(s1, s2, 10 * sizeof(char)));
+    // printf("s1: %s, s2: %s\n", s1, s2);
+    // printf("My function: %d\nOriginal function: %d\n", ft_memcmp(s1, s2, 10 * sizeof(char)), memcmp(s1, s2, 10 * sizeof(char)));
+
+
+    // char *str;
+
+    // str = "Jorge é fera";
+    // ft_strlen_test(str);
+    // str = "Alexandre é fera";
+    // ft_strlen_test(str);
+    // str = "";
+    // ft_strlen_test(str);
+    // str = "testing more and more and more and more and more and more and more";
+    // ft_strlen_test(str);
+
+    
 
     return (0);
-}
+}        
