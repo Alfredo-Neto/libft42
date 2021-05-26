@@ -100,18 +100,20 @@ int main(void)
 
         char *dst = calloc(10, sizeof(char));
         char *src = calloc(20, sizeof(char));
-        size_t size = 22;
+        size_t size = 15;
         char *buffer = calloc(size, sizeof(char));
  
         src = "42 is awesome, bro!!"; // 20
         dst = "Alfredo!!!"; // 10
 
         strcpy(buffer, dst);
-        size_t ft_result = ft_strlcat(buffer, src, size);
+        // size_t result = strlcat(buffer, src, size);
+        size_t ft_result = ft_strlcat(buffer, src, 15);
         
         printf("dst size: %li\n", ft_strlen(dst));
         printf("src size: %li\n\n", ft_strlen(src));
 
+        // printf("result size: %li\n\n", result);
         printf("ft_result size: %li\n\n", ft_result);
 
         puts(buffer);
