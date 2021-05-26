@@ -13,7 +13,7 @@ void printArray(char *arr, int n)
     printf("\n");
 }
 
-void ft_strlen_test(char *str)
+void ft_test(char *str)
 {
     int size;
     int ft_size;
@@ -90,7 +90,13 @@ int main(void)
     // str = "testing more and more and more and more and more and more and more";
     // ft_strlen_test(str);
 
-    
+    // char *dst = calloc(40, sizeof(char));
+    // char *src = calloc(10, sizeof(char));
+
+    //     src = "Alfredo";
+    //     int ft_result = ft_strlcpy(dst, src, sizeof(dst));
+    //     int result = strlcpy(dst, src, sizeof(dst));
+    //     printf("ft_result: %d, result: %d\n", ft_result, result); // 7/40
 
     return (0);
 }        

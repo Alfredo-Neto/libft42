@@ -6,14 +6,14 @@
 #    By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/16 02:25:47 by ade-agui          #+#    #+#              #
-#    Updated: 2021/05/24 22:16:08 by ade-agui         ###   ########.fr        #
+#    Updated: 2021/05/25 23:37:30 by ade-agui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 SRC  =	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
-		ft_memchr.c ft_memcmp.c ft_strlen.c ft_strlcpy.c ft_strlcat.c \
+		ft_memchr.c ft_memcmp.c ft_strlen.c ft_strlcpy.c \
 		
 
 # SRC  =	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
