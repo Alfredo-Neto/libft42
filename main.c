@@ -97,6 +97,6 @@ int main(void)
     //     int ft_result = ft_strlcpy(dst, src, sizeof(dst));
     //     int result = strlcpy(dst, src, sizeof(dst));
     //     printf("ft_result: %d, result: %d\n", ft_result, result); // 7/40
-
+        
     return (0);
 }        
