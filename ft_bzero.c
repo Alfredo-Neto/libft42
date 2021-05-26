@@ -6,20 +6,21 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 11:57:52 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/05/17 12:15:57 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/05/25 20:59:59 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void * s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-  char * c = s;
-  size_t i;
+	size_t	i;
+	char	*c;
 
-  i = -1;  
-  while (++i < n)
-  {
-    c[i] = '\0';
-  }
+	c = s;
+	i = -1;
+	while (++i < n)
+	{
+		c[i] = '\0';
+	}
 }

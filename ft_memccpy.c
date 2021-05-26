@@ -6,13 +6,13 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 14:00:17 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/05/23 00:57:02 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/05/25 21:09:55 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memccpy(void *dest, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	unsigned char	*aux_dst;
 	unsigned char	*aux_src;

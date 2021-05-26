@@ -6,7 +6,14 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 21:54:02 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/05/24 21:54:15 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/05/25 23:00:40 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+
+size_t  strlcpy(char *dst, const char *src, size_t size)
+{
+    
+}
 
