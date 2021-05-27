@@ -198,5 +198,11 @@ int main(void)
 		// 	ft_strncmp_test(s2, s3, offset);
 		// 	offset++;
 		// }
+<<<<<<< HEAD
+=======
+
+		
+
+>>>>>>> dev
     return (0);
 }        
