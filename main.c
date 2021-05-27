@@ -128,12 +128,25 @@ int main(void)
         // unsigned char   *c;
 
         // i = 0;
-        // while (i < ft_strlen(s))
+        // while (i < ft_strlen(s) + 1)
         // {
-        //     c = (unsigned char *)ft_strchr(s, s[i]);
+        //     c = (unsigned char *)ft_strrchr(s, s[i]);
         //     printf("%s\n", c);
         //     i++;
         // }
+
+        char s[] = "abcdefghij";
+        size_t i;
+
+        i = 0;
+        while (i < ft_strlen(s))
+        {
+            char *ft_result = ft_strrchr(s, s[i]);
+            char *result = strrchr(s, s[i]);
+            printf("%s, %s\n", ft_result, result);
+            i++;
+        }
+        
 
     return (0);
 }        
