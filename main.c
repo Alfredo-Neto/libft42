@@ -135,17 +135,18 @@ int main(void)
         //     i++;
         // }
 
-        char s[] = "abcdefghij";
-        size_t i;
+        // char s[] = "abcdefghij";
+        // size_t i;
 
-        i = 0;
-        while (i < ft_strlen(s))
-        {
-            char *ft_result = ft_strrchr(s, s[i]);
-            char *result = strrchr(s, s[i]);
-            printf("%s, %s\n", ft_result, result);
-            i++;
-        }
+        // i = 0;
+        // while (i < ft_strlen(s))
+        // {
+        //     char *ft_result = ft_strrchr(s, s[i]);
+        //     char *result = strrchr(s, s[i]);
+        //     printf("%s, %s\n", ft_result, result);
+        //     i++;
+        // }
+        
         
 
     return (0);

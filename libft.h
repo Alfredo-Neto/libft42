@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 02:29:02 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/05/26 22:35:37 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/05/27 00:44:42 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,5 @@ size_t			ft_strlcpy(char *dst, const char *src, size_t size);
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
+char *			ft_strnstr(const char *big, const char *little, size_t len);
 #endif
