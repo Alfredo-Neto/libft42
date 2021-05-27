@@ -147,7 +147,16 @@ int main(void)
         //     i++;
         // }
         
-        
+        // char *str = strcpy(calloc(11, sizeof(char)), "alo galera");
+        // char *to_find = strcpy(calloc(7, sizeof(char)), "gale");
+
+        // char *ft_buffer = ft_strnstr(str, to_find, sizeof(to_find));
+        // char *buffer = strnstr(str, to_find, sizeof(to_find));
+
+        // if (buffer != ft_buffer)
+        //     printf("[1] KO, substrings don't match(expected:%s, got:%s)\n", buffer, ft_buffer);
+        // else
+		// 	printf("[1] OK. expected: %s result: %s\n", buffer, ft_buffer);
 
     return (0);
 }        
