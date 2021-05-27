@@ -27,6 +27,19 @@
 //         printf("> OK. Result: %d\n", ft_size);
 // }
 
+void	ft_strncmp_test(char *s1, char *s2, unsigned int n)
+{
+	int res;
+	int ft_res;
+
+	res = strncmp(s1, s2, n);
+	ft_res = ft_strncmp(s1, s2, n);
+	if (res != ft_res)
+		printf("> KO, expected: %d, got: %d\n", res, ft_res);
+	else
+		printf("> OK, result: %d\n", ft_res);
+}
+
 int main(void)
 {
     // char arr[] = "Start Stop"; 
@@ -157,6 +170,18 @@ int main(void)
         //     printf("[1] KO, substrings don't match(expected:%s, got:%s)\n", buffer, ft_buffer);
         // else
 		// 	printf("[1] OK. expected: %s result: %s\n", buffer, ft_buffer);
+
+		// char	*s1 = "abcdefghi";
+		// char	*s2 = "abcdEfghi";
+		// int		offset;
+
+		// offset = 0;
+		// printf("[1] Testing strings \"%s\" and \"%s\"\n", s1, s2);
+		// while (offset < 10)
+		// {
+		// 	ft_strncmp_test(s1, s2, offset);
+		// 	offset++;
+		// }
 
     return (0);
 }        
