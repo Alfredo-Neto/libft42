@@ -198,11 +198,19 @@ int main(void)
 		// 	ft_strncmp_test(s2, s3, offset);
 		// 	offset++;
 		// }
-<<<<<<< HEAD
-=======
+		
+		//  int val;
+		// char str[20];
+		
+		// strcpy(str, "98993489");
+		// val = ft_atoi(str);
+		// printf("String value = %s, Int value = %d\n", str, val);
+
+		// strcpy(str, "tutorialspoint.com");
+		// val = ft_atoi(str);
+		// printf("String value = %s, Int value = %d\n", str, val);
 
 		
 
->>>>>>> dev
     return (0);
 }        
