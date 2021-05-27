@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 02:29:02 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/05/27 08:30:14 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/05/27 08:45:18 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ char			*ft_strnstr(const char *big, const char *little, size_t len);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 int				ft_atoi(const char *str);
 int				ft_isalpha(int c);
+int				ft_isdigit(int c);
 
 #endif
