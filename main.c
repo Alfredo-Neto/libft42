@@ -2,30 +2,30 @@
 #include <string.h>
 #include "libft.h"
 
-void printArray(char *arr, int n)
-{
-    int i = 0;
-    while (i < n)
-    {
-        printf("%c", arr[i]);
-        i++;
-    }
-    printf("\n");
-}
+// void printArray(char *arr, int n)
+// {
+//     int i = 0;
+//     while (i < n)
+//     {
+//         printf("%c", arr[i]);
+//         i++;
+//     }
+//     printf("\n");
+// }
 
-void ft_test(char *str)
-{
-    int size;
-    int ft_size;
+// void ft_test(char *str)
+// {
+//     int size;
+//     int ft_size;
 
-    size = strlen(str);
-    ft_size = ft_strlen(str);
+//     size = strlen(str);
+//     ft_size = ft_strlen(str);
 
-    if (size != ft_size)
-        printf("> KO, return value does not match the original function. Expected: %d. Got: %d instead\n", size, ft_size);
-    else
-        printf("> OK. Result: %d\n", ft_size);
-}
+//     if (size != ft_size)
+//         printf("> KO, return value does not match the original function. Expected: %d. Got: %d instead\n", size, ft_size);
+//     else
+//         printf("> OK. Result: %d\n", ft_size);
+// }
 
 int main(void)
 {
@@ -122,8 +122,18 @@ int main(void)
         // else
         //     puts("String was fully copied\n");
 
-        char s[] = "Alo galera";
+        // char s[] = "abcdefghij";
         
+        // size_t i;
+        // unsigned char   *c;
+
+        // i = 0;
+        // while (i < ft_strlen(s))
+        // {
+        //     c = (unsigned char *)ft_strchr(s, s[i]);
+        //     printf("%s\n", c);
+        //     i++;
+        // }
 
     return (0);
 }        
