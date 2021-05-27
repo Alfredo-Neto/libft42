@@ -98,30 +98,31 @@ int main(void)
     //     int result = strlcpy(dst, src, sizeof(dst));
     //     printf("ft_result: %d, result: %d\n", ft_result, result); // 7/40
 
-        char *dst = calloc(10, sizeof(char));
-        char *src = calloc(20, sizeof(char));
-        size_t size = 15;
-        char *buffer = calloc(size, sizeof(char));
+        // char *dst = calloc(10, sizeof(char));
+        // char *src = calloc(20, sizeof(char));
+        // size_t size = 31;
+        // char *buffer = calloc(size, sizeof(char));
  
-        src = "42 is awesome, bro!!"; // 20
-        dst = "Alfredo!!!"; // 10
+        // src = "42 is awesome, bro!!"; // 20
+        // dst = "Alfredo!!!"; // 10
 
-        strcpy(buffer, dst);
-        // size_t result = strlcat(buffer, src, size);
-        size_t ft_result = ft_strlcat(buffer, src, 15);
+        // strcpy(buffer, dst);
+        // // size_t result = strlcat(buffer, src, size);
+        // size_t ft_result = ft_strlcat(buffer, src, 31);
+        // printf("dst size: %li\n", ft_strlen(dst));
+        // printf("src size: %li\n\n", ft_strlen(src));
+
+        // // printf("result size: %li\n\n", result);
+        // printf("ft_result size: %li\n\n", ft_result);
+
+        // puts(buffer);
+        // if( ft_result >= size )
+        //     puts("String truncated\n");
         
-        printf("dst size: %li\n", ft_strlen(dst));
-        printf("src size: %li\n\n", ft_strlen(src));
+        // else
+        //     puts("String was fully copied\n");
 
-        // printf("result size: %li\n\n", result);
-        printf("ft_result size: %li\n\n", ft_result);
-
-        puts(buffer);
-        if( ft_result >= size )
-            puts("String truncated\n");
         
-        else
-            puts("String was fully copied\n");
 
     return (0);
 }        
