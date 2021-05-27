@@ -122,6 +122,7 @@ int main(void)
         // else
         //     puts("String was fully copied\n");
 
+        char s[] = "Alo galera";
         
 
     return (0);
