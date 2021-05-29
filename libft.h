@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 02:29:02 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/05/28 22:57:34 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/05/29 19:27:09 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ int				ft_toupper(int c);
 int				ft_tolower(int c);
 void			*ft_calloc(size_t nmemb, size_t size);
 char			*ft_strdup(const char *s1);
-
 
 /*
 ** Part two - Additional functions
