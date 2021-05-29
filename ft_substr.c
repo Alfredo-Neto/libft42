@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/17 14:00:17 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/05/28 23:22:27 by ade-agui         ###   ########.fr       */
+/*   Created: 2021/05/28 17:58:18 by ade-agui          #+#    #+#             */
+/*   Updated: 2021/05/28 21:38:15 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+char			*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned char	*aux_dst;
-	unsigned char	*aux_src;
+	char *subs;
 
-	aux_dst = (unsigned char *)dest;
-	aux_src = (unsigned char *)src;
-	while (n--)
-	{
-		*(aux_dst++) = *aux_src;
-		if (*(aux_src++) == (unsigned char)c)
-		{
-			return ((char *)dest);
-		}
-	}
-	return (0);
+		size_t i;
+		size_t j;
+	
+		if(!s || !(subs = (char *)malloc(len + 1)))
+			return (0);
+		i = start;	
+		j = 0;
+		while (i < ft_strlen(s) && j < len)
+			subs[j++] = s[i++];
+		subs[j++] = '\0';
+		return (subs);
 }

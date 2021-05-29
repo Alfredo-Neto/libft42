@@ -6,13 +6,13 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 09:09:06 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/05/27 09:32:58 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/05/28 22:57:24 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	size_t	tot_size;
 	void	*dst;
