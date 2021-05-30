@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 02:29:02 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/05/29 21:40:35 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/05/30 02:06:46 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,6 @@ char			*ft_strdup(const char *s1);
 
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_strtrim(char const *s1, char const *set);
 
 #endif
