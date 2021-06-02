@@ -2,7 +2,7 @@
 #include <string.h>
 #include "libft.h"
 
-void printArray(char *arr, int n)
+void print_mem_array(char *arr, int n)
 {
     int i = 0;
     while (i < n)
@@ -308,10 +308,10 @@ void t_memmove()
 {
     char arr[] = "Start Stop"; 
 
-    printArray(arr, sizeof(arr));
+   print_mem_array(arr, sizeof(arr));
     printf("memmove is: \n");
     ft_memmove(arr, arr + 2 , 3 * sizeof(char));
-    printArray(arr, sizeof(arr));
+   print_mem_array(arr, sizeof(arr));
 }
 
 void t_memccpy()
@@ -320,43 +320,44 @@ void t_memccpy()
     char dest[] = "HELLO";
 
     printf("Original is: \n");
-    printArray(dest, sizeof(dest));
+   print_mem_array(dest, sizeof(dest));
     printf("memccpy is: \n");
-    ft_memccpy(dest, arr,'a', sizeof(dest));
-    printArray(dest, sizeof(dest));
+    ft_memccpy(dest, arr,':', sizeof(dest));
+   print_mem_array(dest, sizeof(dest));
 }
 
 void t_memcpy()
 {
     char arr[] = "Start Stop"; 
 
-    printArray(arr, sizeof(arr));
+   print_mem_array(arr, sizeof(arr));
     printf("memcpy is: \n");
     ft_memcpy(arr, arr + 2 , 3 * sizeof(char));
-    printArray(arr, sizeof(arr));
+   print_mem_array(arr, sizeof(arr));
 }
 
 void t_bzero()
 {
     char arr[] = "Start Stop"; 
 
-    printArray(arr, 4);
+   print_mem_array(arr, 4);
     printf("bzero is: \n");
     ft_bzero(arr, sizeof(arr));
-    printArray(arr, 4);
+   print_mem_array(arr, 4);
 }
 
 void t_memset()
 {
     char arr[] = "Start Stop"; 
 
-    printArray(arr, 4);
+   print_mem_array(arr, 4);
     printf("Memset is: \n");
     ft_memset(arr,'3', sizeof(arr));
-    printArray(arr, 4);
+   print_mem_array(arr, 4);
 }
 
 int main(void)
 {
+    t_split();
     return (0);
 }

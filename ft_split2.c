@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_split2.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/01 15:57:05 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/06/02 05:20:55 by ade-agui         ###   ########.fr       */
+/*   Created: 2021/06/02 03:05:03 by ade-agui          #+#    #+#             */
+/*   Updated: 2021/06/02 04:32:26 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int count_substrings(char const *s, char c)
+static int count_words(const char *s, char c)
 {
 	int i;
 	int n_word;
@@ -20,7 +20,8 @@ static int count_substrings(char const *s, char c)
 
 	i = 0;
 	control = 0;
-	while (s[i++] != '\0' && s != '\0')
+	n_word = 0;
+	while (s[0] != '\0' && s[i] != '\0')
 	{
 		if (s[i] != c && control == 0)
 		{
@@ -29,31 +30,32 @@ static int count_substrings(char const *s, char c)
 		}
 		else if (s[i] == c)
 			control = 0;
+		i++;
 	}
 	return (n_word);
 }
 
-static char *substring(char const *s, int begin, int end)
+static char *string(const char *s, int init, int end)
 {
-	char *substring;
-	int len;
+	char *string;
 	int i;
 
-	len = end - begin + 1;
-	if (!(substring = (char *)malloc(len)))
-		return (NULL);
 	i = 0;
-	while (end > begin)
-		substring[i++] = s[begin++];
-	substring[i] = '\0';
-	return (substring);
+	string = (char *)malloc((end - init + 1) * sizeof(char));
+	while (end > init)
+	{
+		string[i] = s[init];
+		i++;
+		init++;
+	}
+	string[i] = '\0';
+	return (string);
 }
 
 char **ft_split(char const *s, char c)
 {
 	char **split;
 	int init_w;
-	size_t len;
 	size_t i;
 	size_t j;
 
@@ -62,17 +64,19 @@ char **ft_split(char const *s, char c)
 	i = -1;
 	j = 0;
 	init_w = -1;
-	len = count_substrings(s, c) + 1 * sizeof(char *);
-	if (!(split = (char *)malloc(len)))
+	split = malloc((count_words(s, c) + 1) * sizeof(char *)); // 2 substrings  * (char *)
+	if (split == 0)
 		return (NULL);
-	while (s[++i] != '\0')
+	while (++i <= ft_strlen(s))
 	{
 		if (s[i] != c && init_w < 0)
 			init_w = i;
-		else if ((s[i] == c || s[i] == '\0') && init_w >= 0)
-			split[j++] = substring(s, init_w, i);
+		else if ((s[i] == c || i == ft_strlen(s)) && init_w >= 0)
+		{
+			split[j++] = string(s, init_w, i);
+			init_w = -1;
+		}
 	}
 	split[j] = NULL;
 	return (split);
 }
-
