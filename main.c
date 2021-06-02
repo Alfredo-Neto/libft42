@@ -50,11 +50,11 @@ void t_split()
     int i;
 
     i = 0;
-    char **str1 = ft_split("42 is amazing, bro", 'a'); // separador
+    char **str1 = ft_split("Jorge", 'r'); // separador
     while (str1[i] != NULL)
         {
             ft_print_result(str1[i]);
-            // write(1, ".", 1);
+            write(1, ",", 1);
             i++;
         }
     write(1, "\n", 1);

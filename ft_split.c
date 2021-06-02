@@ -6,17 +6,17 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 15:57:05 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/06/02 05:35:21 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/06/02 05:49:10 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int count_substrings(char const *s, char c)
+static int	count_substrings(char const *s, char c)
 {
-	int i;
-	int n_word;
-	int key;
+	int	i;
+	int	n_word;
+	int	key;
 
 	i = 0;
 	key = 0;
@@ -34,7 +34,7 @@ static int count_substrings(char const *s, char c)
 	return (n_word);
 }
 
-static char *substring(char const *s, int begin, int end)
+static char	*substring(char const *s, int begin, int end)
 {
 	char *substring;
 	int len;
@@ -50,13 +50,13 @@ static char *substring(char const *s, int begin, int end)
 	return (substring);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char **split;
-	int init_w;
-	size_t len;
-	size_t i;
-	size_t j;
+	char	**split;
+	int		init_w;
+	size_t	len;
+	size_t	i;
+	size_t	j;
 
 	if (s == 0)
 		return (NULL);
@@ -74,9 +74,8 @@ char **ft_split(char const *s, char c)
 		{
 			split[j++] = substring(s, init_w, i);
 			init_w = -1;
-		}	
+		}
 	}
 	split[j] = NULL;
 	return (split);
 }
-
