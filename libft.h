@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 02:29:02 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/06/02 05:53:14 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/06/03 07:58:23 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,5 @@ char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
 char			**ft_split(char const *s, char c);
 char            *ft_itoa(int n);
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 #endif
