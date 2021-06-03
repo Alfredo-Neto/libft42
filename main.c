@@ -350,14 +350,22 @@ void t_memset()
 {
     char arr[] = "Start Stop"; 
 
-   print_mem_array(arr, 4);
-    printf("Memset is: \n");
-    ft_memset(arr,'3', sizeof(arr));
-   print_mem_array(arr, 4);
+   	print_mem_array(arr, 4);
+	printf("Memset is: \n");
+	ft_memset(arr,'3', sizeof(arr));
+  	print_mem_array(arr, 4);
+}
+
+void t_itoa ()
+{
+	char *res = ft_itoa(-2147483648);
+		ft_print_result(res);
+		printf("\n");
+		free(res);
 }
 
 int main(void)
 {
-    t_split();
+    t_itoa();
     return (0);
 }
