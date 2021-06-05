@@ -6,15 +6,15 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/05 04:51:42 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/06/05 04:58:24 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/06/05 08:06:32 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-    if (s != NULL)
+	if (s != NULL)
 	{
 		ft_putstr_fd(s, fd);
 		ft_putchar_fd('\n', fd);

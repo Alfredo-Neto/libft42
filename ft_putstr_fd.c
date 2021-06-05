@@ -6,15 +6,15 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/05 04:52:26 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/06/05 04:57:10 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/06/05 08:04:52 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-    int i;
+	int	i;
 
 	if (s != NULL)
 	{
