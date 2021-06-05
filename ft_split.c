@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 15:57:05 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/06/05 07:01:55 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/06/05 07:48:04 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,13 @@ static int	count_substrings(char const *s, char c)
 
 static char	*substring(char const *s, int begin, int end)
 {
-	char *substring;
-	int len;
-	int i;
+	char	*substring;
+	int		len;
+	int		i;
 
 	len = end - begin + 1;
-	if (!(substring = (char *)malloc(len * sizeof(char))))
+	substring = (char *)malloc(len * sizeof(char));
+	if (substring == 0)
 		return (NULL);
 	i = 0;
 	while (begin < end)
@@ -54,7 +55,6 @@ char	**ft_split(char const *s, char c)
 {
 	char	**split;
 	int		init_w;
-	size_t	len;
 	size_t	i;
 	size_t	j;
 
@@ -63,8 +63,8 @@ char	**ft_split(char const *s, char c)
 	i = -1;
 	j = 0;
 	init_w = -1;
-	len = (count_substrings(s, c) + 1) * sizeof(char *);
-	if (!(split = (char **)malloc(len)))
+	split = (char **)malloc((count_substrings(s, c) + 1) * sizeof(char *));
+	if (split == 0)
 		return (NULL);
 	while (++i <= ft_strlen(s))
 	{

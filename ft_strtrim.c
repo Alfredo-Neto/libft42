@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/29 22:34:08 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/05/31 21:31:20 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/06/05 07:43:52 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	ft_charcmp(char c, char const *set)
 	return (0);
 }
 
-char		*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trim;
 	size_t	i;
@@ -44,8 +44,12 @@ char		*ft_strtrim(char const *s1, char const *set)
 	while (i && ft_charcmp(s1[i], set))
 		i--;
 	end = i;
-	len = end >= begin ? end - begin + 2 : 0;
-	if (!(trim = (char *)malloc(len)))
+	if (end >= begin)
+		len = end - begin + 2;
+	else
+		len = 0;
+	trim = (char *)malloc(len);
+	if (trim == 0)
 		return (0);
 	ft_strlcpy(trim, &s1[begin], len);
 	return (trim);

@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/29 18:08:34 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/05/30 00:26:48 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/06/05 07:39:22 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	j;
 
 	len = (ft_strlen(s1) + ft_strlen(s2)) + 1;
-	if (!s1 || !s2 || !(join = (char *)malloc(len)))
+	join = (char *)malloc(len);
+	if (!s1 || !s2 || join == 0)
 		return (0);
 	i = 0;
 	while (s1[i] != '\0')

@@ -6,11 +6,11 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 08:51:41 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/05/27 08:53:22 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/06/05 07:30:37 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);

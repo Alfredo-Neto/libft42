@@ -6,13 +6,13 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 07:16:33 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/06/05 06:40:25 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/06/05 07:28:41 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int	index;
 	int	sign;

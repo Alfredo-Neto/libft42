@@ -6,11 +6,11 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 08:44:53 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/05/27 08:46:17 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/06/05 07:30:08 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);

@@ -6,19 +6,20 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 17:58:18 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/05/29 22:10:11 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/06/05 07:37:52 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char			*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*subs;
 	size_t	i;
 	size_t	j;
 
-	if (!s || !(subs = (char *)malloc(len + 1)))
+	subs = (char *)malloc(len + 1);
+	if (!s || subs == 0)
 		return (0);
 	i = start;
 	j = 0;
