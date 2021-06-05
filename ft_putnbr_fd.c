@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/03 07:57:29 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/06/05 04:47:22 by ade-agui         ###   ########.fr       */
+/*   Created: 2021/06/05 04:53:48 by ade-agui          #+#    #+#             */
+/*   Updated: 2021/06/05 05:01:05 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void ft_putnbr_fd(int n, int fd)
 {
-	char	*str;
-	int		i;
+    unsigned int	nbr;
 
-	i = 0;
-	if (s == 0 || f == 0)
-		return (NULL);
-	str = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
-	if (str == 0)
-		return (NULL);
-	while (s[i] != '\0')
+	if (n < 0)
 	{
-		str[i] = f(i, s[i]);
-		i++;
+		ft_putchar_fd('-', fd);
+		nbr = (unsigned int)(n * -1);
 	}
-	str[i] = '\0';
-	return (str);
+	else
+		nbr = (unsigned int)n;
+	if (nbr >= 10)
+		ft_putnbr_fd(nbr / 10, fd);
+	ft_putchar_fd((char)(nbr % 10 + 48), fd);
 }
