@@ -366,6 +366,6 @@ void t_itoa ()
 
 int main(void)
 {
-    t_itoa();
+    t_strchr();
     return (0);
 }
