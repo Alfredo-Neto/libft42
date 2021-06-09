@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/09 02:05:39 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/06/09 02:06:21 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/06/09 02:53:54 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void ft_lstadd_front(t_list **lst, t_list *new)
 {
-    
+    new->next = *lst;
+    *lst = new;
 }
