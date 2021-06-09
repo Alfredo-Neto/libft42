@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/05 04:53:48 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/06/07 17:09:03 by ade-agui         ###   ########.fr       */
+/*   Created: 2021/06/09 01:41:35 by ade-agui          #+#    #+#             */
+/*   Updated: 2021/06/09 02:03:01 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+t_list	*ft_lstnew(void *content)
 {
-	if (n == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	if (n < 0 && n != -2147483648)
-	{
-		ft_putchar_fd('-', fd);
-		n = n * -1;
-	}
-	if (n <= 9 && n >= 0)
-		ft_putchar_fd(n + 48, fd);
-	else if (n > 0)
-	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putchar_fd(n % 10 + 48, fd);
-	}
+	t_list	*n;
+
+	n = (t_list *)malloc(sizeof(t_list));
+	if (n == NULL)
+		return (NULL);
+	n->content = content;
+	n->next = NULL;
+	return (n);
 }
