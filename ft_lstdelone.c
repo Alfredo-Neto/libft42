@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/09 05:15:00 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/06/09 05:22:00 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/06/09 09:02:48 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-    del(lst->content);
+	del(lst->content);
 	free(lst);
 }
