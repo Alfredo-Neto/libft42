@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/09 06:30:01 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/06/09 09:02:16 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/06/09 22:33:48 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,22 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*map;
+	t_list	*new_lst;
+	t_list	*elem;
 
-	if (lst == 0)
-		return (NULL);
-	else
+	if (!lst)
+		return (0);
+	new_lst = 0;
+	while (lst)
 	{
-		map = ft_lstnew(f(lst->content));
-		if (map == NULL)
+		elem = ft_lstnew(f(lst->content));
+		if (elem == 0)
 		{
-			ft_lstclear(&map, del);
-			return (NULL);
+			ft_lstclear(&new_lst, del);
+			return (0);
 		}
-		map->next = ft_lstmap(lst->next, f, del);
-		return (map);
-	}	
+		ft_lstadd_back(&new_lst, elem);
+		lst = lst->next;
+	}
+	return (new_lst);
 }
