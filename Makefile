@@ -6,7 +6,7 @@
 #    By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/16 02:25:47 by ade-agui          #+#    #+#              #
-#    Updated: 2021/06/09 06:32:13 by ade-agui         ###   ########.fr        #
+#    Updated: 2021/06/09 22:40:53 by ade-agui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,6 @@ all: $(NAME)
 $(NAME):
 	@gcc -Wall -Wextra -Werror -c $(SRC)
 	@ar rc $(NAME) $(OBJ)
-	@gcc -Wall -Wextra -Werror main.c -L. -lft -lbsd
 	@ranlib $(NAME)
 
 bonus: $(OBJ_BONUS)
