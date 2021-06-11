@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 15:57:05 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/06/05 07:48:04 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/06/11 17:52:55 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,25 +54,27 @@ static char	*substring(char const *s, int begin, int end)
 char	**ft_split(char const *s, char c)
 {
 	char	**split;
+	char	*s_copy;
 	int		init_w;
-	size_t	i;
-	size_t	j;
+	int		i;
+	int		j;
 
 	if (s == 0)
 		return (NULL);
+	s_copy = ft_strtrim(s, c);
 	i = -1;
 	j = 0;
 	init_w = -1;
-	split = (char **)malloc((count_substrings(s, c) + 1) * sizeof(char *));
+	split = (char **)malloc((count_substrings(s_copy, c) + 1) * sizeof(char *));
 	if (split == 0)
 		return (NULL);
-	while (++i <= ft_strlen(s))
+	while (++i <= ft_strlen(s_copy))
 	{
-		if (s[i] != c && init_w < 0)
+		if (s_copy[i] != c && init_w < 0)
 			init_w = i;
-		else if ((s[i] == c || i == ft_strlen(s)) && init_w >= 0)
+		else if ((s_copy[i] == c || i == ft_strlen(s_copy)) && init_w >= 0)
 		{
-			split[j++] = substring(s, init_w, i);
+			split[j++] = substring(s_copy, init_w, i);
 			init_w = -1;
 		}
 	}
