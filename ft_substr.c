@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 17:58:18 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/06/05 07:37:52 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/06/11 01:47:32 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	j = 0;
 	while (i < ft_strlen(s) && j < len)
 		subs[j++] = s[i++];
-	subs[j++] = '\0';
+	subs[j] = '\0';
 	return (subs);
 }

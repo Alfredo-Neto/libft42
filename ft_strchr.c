@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 21:09:36 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/06/05 07:25:23 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/06/11 01:57:37 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,10 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i] != '\0' && s[i] != c)
-		i++;
-	if (s[i] == '\0' && c != '\0')
+	while (*s && *s != (c % 256))
+		s++;
+	if (*s == '\0' && (c % 256) != '\0')
 		return (0);
 	else
-		return ((char *)&s[i]);
+		return ((char *)s);
 }
