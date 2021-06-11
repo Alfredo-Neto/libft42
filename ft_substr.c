@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 17:58:18 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/06/11 01:47:32 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/06/11 03:36:06 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	size_t	j;
 
+	if ((ft_strlen(s) - start) < len)
+		len = (ft_strlen(s) - start);
 	subs = (char *)malloc(len + 1);
 	if (!s || subs == 0)
 		return (0);
