@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/29 22:34:08 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/06/05 07:43:52 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/06/10 22:00:25 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i--;
 	end = i;
 	if (end >= begin)
-		len = end - begin + 2;
+		len = end - begin + 1;
 	else
 		len = 0;
-	trim = (char *)malloc(len);
+	trim = (char *)malloc((len + 1) * sizeof(char));
 	if (trim == 0)
 		return (0);
-	ft_strlcpy(trim, &s1[begin], len);
+	ft_strlcpy(trim, &s1[begin], len + 1);
 	return (trim);
 }
