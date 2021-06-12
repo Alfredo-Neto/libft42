@@ -6,10 +6,11 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 15:57:05 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/06/11 17:52:55 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/06/12 04:47:05 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
 static int	count_substrings(char const *s, char c)
@@ -21,7 +22,7 @@ static int	count_substrings(char const *s, char c)
 	i = 0;
 	key = 0;
 	n_word = 0;
-	while (s[i++] != '\0' && *s != '\0')
+	while (s[i] != '\0' && *s != '\0')
 	{
 		if (s[i] != c && key == 0)
 		{
@@ -30,6 +31,7 @@ static int	count_substrings(char const *s, char c)
 		}
 		else if (s[i] == c)
 			key = 0;
+		i++;
 	}
 	return (n_word);
 }
@@ -54,27 +56,25 @@ static char	*substring(char const *s, int begin, int end)
 char	**ft_split(char const *s, char c)
 {
 	char	**split;
-	char	*s_copy;
 	int		init_w;
 	int		i;
 	int		j;
 
 	if (s == 0)
 		return (NULL);
-	s_copy = ft_strtrim(s, c);
 	i = -1;
 	j = 0;
 	init_w = -1;
-	split = (char **)malloc((count_substrings(s_copy, c) + 1) * sizeof(char *));
+	split = malloc((count_substrings(s, c) + 1) * sizeof(char *));
 	if (split == 0)
 		return (NULL);
-	while (++i <= ft_strlen(s_copy))
+	while ((size_t)++i <= ft_strlen(s))
 	{
-		if (s_copy[i] != c && init_w < 0)
+		if (s[i] != c && init_w < 0)
 			init_w = i;
-		else if ((s_copy[i] == c || i == ft_strlen(s_copy)) && init_w >= 0)
+		else if ((s[i] == c || (size_t)i == ft_strlen(s)) && init_w >= 0)
 		{
-			split[j++] = substring(s_copy, init_w, i);
+			split[j++] = substring(s, init_w, i);
 			init_w = -1;
 		}
 	}
