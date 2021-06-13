@@ -6,11 +6,10 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 15:57:05 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/06/12 04:47:05 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/06/12 20:27:47 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 static int	count_substrings(char const *s, char c)
