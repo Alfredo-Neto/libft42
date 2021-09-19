@@ -6,16 +6,25 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 02:29:02 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/06/11 16:26:21 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/09/19 18:53:50 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# ifndef OPEN_MAX
+#  define OPEN_MAX 256
+# endif
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 128
+# endif
+
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
+# include <fcntl.h>
 # include <bsd/string.h>
 
 /*
@@ -61,6 +70,7 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
+int				get_next_line(int fd, char **line);
 
 /*
 ** Bonus Part

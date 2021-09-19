@@ -6,27 +6,46 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 01:11:22 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/06/13 16:26:36 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/06/19 18:18:03 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	c;
 	size_t	d;
 
-	if (dstsize <= ft_strlen(dst))
-		return (dstsize + ft_strlen(src));
-	c = ft_strlen(dst);
+	if (dstsize <= strlen(dst))
+		return (dstsize + strlen(src)); // this is a poten\0_____      // a potentially long string\0
+	c = strlen(dst);
 	d = 0;
-	while (src[d] != '\0' && c + 1 < dstsize)
-	{
-		dst[c] = src[d];
-		c++;
-		d++;
-	}
+	while (src[d] != '\0' && c + 1 < dstsize) // 16
+		dst[c++] = src[d++];
 	dst[c] = '\0';
-	return (ft_strlen(dst) + ft_strlen(&src[d]));
+	return (strlen(dst) + strlen(&src[d]));
+}
+
+int main()
+{
+    char first[] = "This is ";
+    char last[] = "a potentially long string";
+    int r;
+    int size = 34;
+    char buffer[size];
+
+    strcpy(buffer,first);
+    r = ft_strlcat(buffer,last,size);
+
+    puts(buffer);
+    printf("Value returned: %d\n",r);
+    if( r > size )
+        puts("String truncated");
+    else
+        puts("String was fully copied");
+
+    return(0);
 }

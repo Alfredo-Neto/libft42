@@ -6,11 +6,33 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 07:16:33 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/06/05 07:28:41 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/06/13 20:28:16 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	ft_print_result2(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_print_result(int n)
+{
+	if (n >= 0)
+	{
+		if (n >= 10)
+			ft_print_result(n / 10);
+		ft_print_result2(n % 10 + '0');
+	}
+	else
+	{
+		ft_print_result2('-');
+		if (n <= -10)
+			ft_print_result(n / -10);
+		ft_print_result2(n % -10 * -1 + '0');
+	}
+}
 
 int	ft_atoi(const char *str)
 {
@@ -35,4 +57,11 @@ int	ft_atoi(const char *str)
 		index++;
 	}
 	return (res * sign);
+}
+
+int main (void)
+{
+	ft_print_result(ft_atoi("12+23"));
+	printf("\n");
+	return (0);
 }
