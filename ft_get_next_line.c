@@ -52,7 +52,7 @@ static int	return_line(char **save, char **line, ssize_t ret, int fd)
 		return (check_ret(save, line, ret));
 }
 
-int	get_next_line(int fd, char **line)
+int	ft_get_next_line(int fd, char **line)
 {
 	char		*buffer;
 	static char	*save[OPEN_MAX];
