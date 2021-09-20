@@ -71,6 +71,7 @@ void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 int				get_next_line(int fd, char **line);
+void			ft_super_free(void **ptr);
 
 /*
 ** Bonus Part
