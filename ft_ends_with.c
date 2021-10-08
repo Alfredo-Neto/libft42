@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int ft_endswith(const char *str, const char *substr, char breakpoint, size_t n)
+int ft_ends_with(const char *str, const char *substr, char breakpoint, size_t n)
 {
     char *end;
 
