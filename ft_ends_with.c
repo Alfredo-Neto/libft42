@@ -1,13 +1,16 @@
 #include "libft.h"
 
-int ft_ends_with(const char *str, const char *substr, char breakpoint, size_t n)
+int	ft_ends_with(const char *str, const char *tail)
 {
-    char *end;
+	size_t	str_len;
+	size_t	tail_len;
 
-	if(!str)
+	str_len = ft_strlen(str);
+	tail_len = ft_strlen(tail);
+	if (tail_len > str_len)
 		return (0);
-	end = ft_strrchr(str, breakpoint);
-	if (ft_strncmp(end, substr, n))
-		return (0);
+	while (str_len-- && tail_len--)
+		if (str[str_len] != tail[tail_len])
+			return (0);
 	return (1);
 }
