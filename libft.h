@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 02:29:02 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/11/09 01:14:12 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/11/09 02:28:28 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,8 @@ void			ft_putnbr_fd(int n, int fd);
 int				ft_get_next_line(int fd, char **line);
 void			ft_super_free(void **ptr);
 int				ft_ends_with(const char *str, const char *tail);
-void 			ft_swap_pos (char *curr_pos, char *next_pos, char curr_val, char next_val);
+void			ft_swap_pos(char *curr_pos, char *next_pos,
+					char curr_val, char next_val);
 char			*ft_strappendchar(char *str, char c);
 
 /*
